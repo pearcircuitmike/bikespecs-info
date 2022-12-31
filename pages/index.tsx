@@ -4,6 +4,7 @@ import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function Home() {
       <main>
         <Navbar />
         <h1 className="text-3xl font-bold underline">Hello!</h1>
+        <Link href="/bikes">View all bikes</Link>
         <Footer />
       </main>
     </>
