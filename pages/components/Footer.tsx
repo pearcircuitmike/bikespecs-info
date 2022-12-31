@@ -1,6 +1,6 @@
 const Footer = (): JSX.Element => {
   return (
-    <div>
+    <div className="footer">
       <p>copyright 2023</p>
     </div>
   );
