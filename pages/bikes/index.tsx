@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type BikeProps = {
   id: number;
   brand: string;
@@ -61,14 +63,19 @@ const Index = (props: { bikes: any }): JSX.Element => {
         <tbody>
           {props.bikes.map((bike: BikeProps) => {
             return (
-              <tr key={bike.id}>
-                <td> {bike.brand}</td>
-                <td> {bike.model}</td>
-                <td> {bike.year}</td>
-                <td> {bike.category}</td>
-                <td> {bike.displacement}</td>
-                <td> {bike.power}</td>
-              </tr>
+              <>
+                <tr key={bike.id}>
+                  <td> {bike.brand}</td>
+                  <td> {bike.model}</td>
+                  <td> {bike.year}</td>
+                  <td> {bike.category}</td>
+                  <td> {bike.displacement}</td>
+                  <td> {bike.power}</td>
+                  <td className="hover:bg-sky-700">
+                    <Link href={`/bikes/${bike.id}`}>Details</Link>
+                  </td>
+                </tr>
+              </>
             );
           })}
         </tbody>
