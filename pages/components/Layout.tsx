@@ -1,5 +1,5 @@
-import Navbar from "./Navbar.tsx";
-import Footer from "./Footer.tsx";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Layout = ({ children }: any): JSX.Element => {
   return (
