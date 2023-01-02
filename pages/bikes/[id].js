@@ -21,6 +21,7 @@ export const getStaticProps = async (context) => {
 
   return {
     props: { bikedetails: data[0] },
+    revalidate: 60,
   };
 };
 
