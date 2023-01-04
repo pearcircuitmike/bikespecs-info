@@ -44,7 +44,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Index = (props: { bikes: any }): JSX.Element => {
+const Index = (props: { bikes: Array<BikeProps> }): JSX.Element => {
   return (
     <div>
       <h1 className="text-3xl font-bold underline">All bikes</h1>
@@ -62,7 +62,7 @@ const Index = (props: { bikes: any }): JSX.Element => {
         </thead>
         <tbody>
           {props.bikes.map((bike: BikeProps) => {
-            console.log(bike.id);
+            // console.log(bike.id);
             return (
               <tr key={bike.id}>
                 <td> {bike.brand}</td>
