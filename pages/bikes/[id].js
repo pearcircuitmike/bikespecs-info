@@ -2,7 +2,7 @@ export const getStaticPaths = async () => {
   const res = await fetch("https://bikespecs-api.vercel.app/bikeids");
   const data = await res.json();
 
-  const paths = data.map((bikeid) => {
+  const paths = data.slice(0, 10000).map((bikeid) => {
     return {
       params: { id: bikeid.toString() },
     };
