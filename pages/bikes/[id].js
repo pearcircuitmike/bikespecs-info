@@ -1,5 +1,3 @@
-import DescriptionParagraph from "../components/DescriptionParagraph";
-
 export const getStaticPaths = async () => {
   const res = await fetch("https://bikespecs-api.vercel.app/bikeids");
   const data = await res.json();
@@ -35,7 +33,6 @@ const Details = ({ bikedetails }) => {
         <p>{bikedetails.id}</p>
       </div>
       <div className="col-span-8">
-        <DescriptionParagraph bike={{ bikedetails }} />
         <p>
           The{" "}
           <span className="capitalize">
