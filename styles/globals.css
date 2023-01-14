@@ -17,8 +17,7 @@ a {
   text-decoration: none;
 }
 .content {
-  max-width: 2000px;
-  margin: 0 auto;
+  margin: 0 2vw;
 }
 nav {
   margin: 10px auto 80px;

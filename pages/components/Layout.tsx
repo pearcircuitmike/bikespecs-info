@@ -3,9 +3,9 @@ import Footer from "./Footer";
 
 const Layout = ({ children }: any): JSX.Element => {
   return (
-    <div className="content">
+    <div>
       <Navbar />
-      {children}
+      <div className="content">{children}</div>
       <Footer />
     </div>
   );
