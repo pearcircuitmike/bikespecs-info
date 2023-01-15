@@ -1,8 +1,10 @@
 const DescriptionParagraph = ({ bike }) => {
   return (
-    <>
-      <p>{bike?.brand}</p>;
-    </>
+    bike && (
+      <>
+        <p>{bike.brand}</p>
+      </>
+    )
   );
 };
 

@@ -29,24 +29,34 @@ export const getStaticProps = async (context) => {
 
 export const Details = ({ bikedetails }) => {
   return (
-    <div className="grid grid-cols-12 gap-3">
-      <DescriptionParagraph bike={bikedetails} />
-      <div className="col-span-4">
-        <h1>{bikedetails.model}</h1>
-        <p>{bikedetails.id}</p>
-      </div>
-      <div className="col-span-8">
-        <p>
-          The{" "}
+    <div className="flex flex-col space-y-10">
+      <div>
+        <h1 className="text-2xl font-bold capitalize">
+          {bikedetails.year} {bikedetails.brand} {bikedetails.model}
+        </h1>
+        <h2 className="text-lg ">
           <span className="capitalize">
-            {bikedetails.year} {bikedetails.brand} {bikedetails.model}
-          </span>{" "}
-          <span className="lowercase">is a {bikedetails.category}</span>.{" "}
-          {bikedetails.displacement
-            ? `
-          It has a displacement of ${bikedetails.displacement} cc.`
-            : `We don't have any displacement data for the  ${bikedetails.year} ${bikedetails.model}.`}
-        </p>
+            {bikedetails.year} {bikedetails.brand} {bikedetails.model}{" "}
+          </span>
+          specifications, model, year, category, engine and transmission,
+          chassis and suspension, and physical characteristics.
+        </h2>
+      </div>
+      <hr />
+
+      {/* overview */}
+      <div>
+        <h3 className="text-2xl font-bold capitalize">
+          {bikedetails.year} {bikedetails.brand} {bikedetails.model} Overview
+        </h3>
+        <h2 className="text-lg ">
+          <span className="capitalize">
+            {bikedetails.year} {bikedetails.brand} {bikedetails.model}{" "}
+          </span>
+          specifications, model, year, category, engine and transmission,
+          chassis and suspension, and physical characteristics.
+        </h2>
+        <DescriptionParagraph bike={bikedetails} />
       </div>
     </div>
   );
