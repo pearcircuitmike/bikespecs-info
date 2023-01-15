@@ -1,7 +1,7 @@
 const DescriptionParagraph = ({ bike }) => {
   return (
     <>
-      <p>{bike.brand}</p>;
+      <p>{bike?.brand}</p>;
     </>
   );
 };
