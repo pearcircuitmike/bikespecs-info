@@ -65,7 +65,6 @@ const Index = (props: { bikes: Array<BikeProps> }): JSX.Element => {
         </thead>
         <tbody>
           {props.bikes.map((bike: BikeProps) => {
-            // console.log(bike.id);
             return (
               <tr key={bike.id} className="table-auto border">
                 <td className="capitalize text-left px-3 py-1">{bike.brand}</td>
