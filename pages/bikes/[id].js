@@ -4,7 +4,7 @@ export const getStaticPaths = async () => {
   const res = await fetch("https://bikespecs-api.vercel.app/bikeids");
   const data = await res.json();
 
-  const paths = data.slice(0, 10000).map((bikeid) => {
+  const paths = data.slice(0, 1000).map((bikeid) => {
     return {
       params: { id: bikeid.toString() },
     };
@@ -20,7 +20,6 @@ export const getStaticProps = async (context) => {
   const id = context.params.id;
   const res = await fetch(`https://bikespecs-api.vercel.app/bikes/${id}`);
   const data = await res.json();
-  console.log(data);
 
   return {
     props: { bikedetails: data },
@@ -28,8 +27,7 @@ export const getStaticProps = async (context) => {
   };
 };
 
-const Details = ({ bikedetails }) => {
-  console.log(bikedetails);
+export const Details = ({ bikedetails }) => {
   return (
     <div className="grid grid-cols-12 gap-3">
       <DescriptionParagraph bike={bikedetails} />

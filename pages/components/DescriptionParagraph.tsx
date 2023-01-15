@@ -1,5 +1,4 @@
-const DescriptionParagraph = ({ bike }) => {
-  console.log(bike);
+const DescriptionParagraph = ({ bike }: any) => {
   return (
     <>
       <p>{bike.brand}</p>;
